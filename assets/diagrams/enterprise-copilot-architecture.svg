@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Enterprise Copilot sanitized reference architecture">
+  <rect width="960" height="420" fill="#F7FAFC"/>
+  <text x="24" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B2545">Enterprise Copilot  Sanitized Reference Architecture</text>
+  <defs>
+    <style>
+      .box { fill:#fff; stroke:#1B4F72; stroke-width:1.5; rx:6; }
+      .t { font-family:Helvetica, Arial, sans-serif; font-size:12; fill:#0B2545; text-anchor:middle; }
+      .s { font-family:Helvetica, Arial, sans-serif; font-size:10; fill:#4A5568; text-anchor:middle; }
+      .arr { stroke:#13315C; stroke-width:1.5; fill:none; marker-end:url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#13315C"/></marker>
+  </defs>
+  <rect class="box" x="30" y="80" width="120" height="56"/><text class="t" x="90" y="105">Employee</text><text class="s" x="90" y="122">Entra ID</text>
+  <rect class="box" x="190" y="80" width="140" height="56"/><text class="t" x="260" y="105">Copilot Studio</text><text class="s" x="260" y="122">Orchestration</text>
+  <rect class="box" x="370" y="80" width="140" height="56"/><text class="t" x="440" y="105">RAG Retrieval</text><text class="s" x="440" y="122">ACL + metadata</text>
+  <rect class="box" x="550" y="80" width="150" height="56"/><text class="t" x="625" y="105">Azure OpenAI</text><text class="s" x="625" y="122">Grounded answer</text>
+  <rect class="box" x="740" y="80" width="180" height="56"/><text class="t" x="830" y="105">Response</text><text class="s" x="830" y="122">Citations</text>
+  <path class="arr" d="M150,108 H190"/><path class="arr" d="M330,108 H370"/><path class="arr" d="M510,108 H550"/><path class="arr" d="M700,108 H740"/>
+  <rect class="box" x="190" y="220" width="140" height="48"/><text class="t" x="260" y="248">SharePoint</text>
+  <rect class="box" x="360" y="220" width="140" height="48"/><text class="t" x="430" y="248">Approved Docs</text>
+  <rect class="box" x="530" y="220" width="140" height="48"/><text class="t" x="600" y="248">Dataverse</text>
+  <rect class="box" x="370" y="300" width="140" height="48"/><text class="t" x="440" y="328">Vector Index</text>
+  <path class="arr" d="M260,220 V168"/><path class="arr" d="M430,220 V168"/><path class="arr" d="M600,220 V136 H510"/><path class="arr" d="M440,300 V136"/>
+  <text class="s" x="480" y="400">Knowledge sources feed the index; generation is constrained to retrieved, authorized context.</text>
+</svg>

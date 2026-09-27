@@ -1,0 +1,43 @@
+{
+  "$comment": "Reference Implementation — example tool schema for an orchestrator agent. Not proprietary production code.",
+  "tools": [
+    {
+      "name": "search_enterprise_knowledge",
+      "description": "Semantic search over approved enterprise documents. Returns grounded chunks with source IDs.",
+      "parameters": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": { "type": "string", "maxLength": 1000 },
+          "product": { "type": "string" },
+          "region": { "type": "string" },
+          "top_k": { "type": "integer", "minimum": 1, "maximum": 10, "default": 5 }
+        }
+      }
+    },
+    {
+      "name": "get_service_request",
+      "description": "Retrieve a service request the caller is authorized to view.",
+      "parameters": {
+        "type": "object",
+        "required": ["request_id"],
+        "properties": {
+          "request_id": { "type": "string", "pattern": "^[A-Za-z0-9-]{6,40}$" }
+        }
+      }
+    },
+    {
+      "name": "create_service_request",
+      "description": "Create a service request. High-risk paths may require human approval before commit.",
+      "parameters": {
+        "type": "object",
+        "required": ["category", "summary"],
+        "properties": {
+          "category": { "type": "string" },
+          "summary": { "type": "string", "maxLength": 500 },
+          "priority": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      }
+    }
+  ]
+}

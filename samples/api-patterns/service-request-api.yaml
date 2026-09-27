@@ -1,0 +1,98 @@
+# Reference Implementation — REST API contract (OpenAPI 3 sketch)
+openapi: 3.0.3
+info:
+  title: Enterprise Service Request API
+  version: 1.0.0
+  description: >
+    Sanitized contract illustrating how a Copilot / Power Automate custom connector
+    might create and read service requests. Not a client production specification.
+servers:
+  - url: https://api.example-enterprise.local/v1
+paths:
+  /service-requests:
+    post:
+      operationId: createServiceRequest
+      summary: Create a service request
+      security:
+        - oauth2:
+            - service_requests.write
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServiceRequestCreate'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceRequest'
+        '400':
+          description: Validation error
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+  /service-requests/{id}:
+    get:
+      operationId: getServiceRequest
+      summary: Get service request by id
+      security:
+        - oauth2:
+            - service_requests.read
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceRequest'
+        '404':
+          description: Not found
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token
+          scopes:
+            service_requests.read: Read service requests
+            service_requests.write: Create and update service requests
+  schemas:
+    ServiceRequestCreate:
+      type: object
+      required: [category, summary]
+      properties:
+        category:
+          type: string
+        summary:
+          type: string
+          maxLength: 500
+        priority:
+          type: string
+          enum: [low, medium, high]
+    ServiceRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+          enum: [submitted, in_progress, completed, rejected]
+        category:
+          type: string
+        summary:
+          type: string
+        createdAt:
+          type: string
+          format: date-time

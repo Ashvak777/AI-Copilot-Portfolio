@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-label="Agentic workflow sanitized reference architecture">
+  <rect width="960" height="500" fill="#F7FAFC"/>
+  <text x="24" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B2545">Agentic Workflow  Sanitized Reference Architecture</text>
+  <defs>
+    <style>
+      .box { fill:#fff; stroke:#1B4F72; stroke-width:1.5; rx:6; }
+      .dec { fill:#fff; stroke:#1B4F72; stroke-width:1.5; }
+      .t { font-family:Helvetica, Arial, sans-serif; font-size:11; fill:#0B2545; text-anchor:middle; }
+      .arr { stroke:#13315C; stroke-width:1.5; fill:none; marker-end:url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#13315C"/></marker>
+  </defs>
+  <rect class="box" x="400" y="50" width="160" height="44"/><text class="t" x="480" y="76">User ’ Copilot Studio</text>
+  <rect class="box" x="380" y="120" width="200" height="50"/><text class="t" x="480" y="142">Orchestrator Agent</text><text class="t" x="480" y="158" style="font-size:10px;fill:#4A5568">Azure OpenAI tool calling</text>
+  <path class="arr" d="M480,94 V120"/>
+  <rect class="box" x="40" y="230" width="150" height="44"/><text class="t" x="115" y="256">Knowledge / RAG</text>
+  <rect class="box" x="210" y="230" width="150" height="44"/><text class="t" x="285" y="256">Data Tool</text>
+  <rect class="box" x="380" y="230" width="150" height="44"/><text class="t" x="455" y="256">REST / MCP</text>
+  <rect class="box" x="550" y="230" width="150" height="44"/><text class="t" x="625" y="256">Power Automate</text>
+  <rect class="box" x="720" y="230" width="180" height="44"/><text class="t" x="810" y="256">Specialist Agent</text>
+  <path class="arr" d="M400,160 H115 V230"/><path class="arr" d="M420,170 V230"/><path class="arr" d="M480,170 V230"/><path class="arr" d="M540,170 V230"/><path class="arr" d="M560,160 H810 V230"/>
+  <polygon class="dec" points="480,310 560,350 480,390 400,350"/><text class="t" x="480" y="354">High-risk write?</text>
+  <path class="arr" d="M455,274 V318"/>
+  <rect class="box" x="200" y="420" width="160" height="40"/><text class="t" x="280" y="444">Human Approval</text>
+  <rect class="box" x="600" y="420" width="160" height="40"/><text class="t" x="680" y="444">Execute Tool</text>
+  <path class="arr" d="M420,350 H280 V420"/><path class="arr" d="M540,350 H680 V420"/>
+  <text class="t" x="480" y="490" style="fill:#4A5568">Narrowly scoped tool identities · audit every invocation</text>
+</svg>

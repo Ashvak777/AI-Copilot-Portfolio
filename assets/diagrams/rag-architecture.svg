@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-label="Enterprise RAG sanitized reference architecture">
+  <rect width="960" height="480" fill="#F7FAFC"/>
+  <text x="24" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B2545">Enterprise RAG  Sanitized Reference Architecture</text>
+  <defs>
+    <style>
+      .box { fill:#fff; stroke:#1B4F72; stroke-width:1.5; rx:6; }
+      .t { font-family:Helvetica, Arial, sans-serif; font-size:11; fill:#0B2545; text-anchor:middle; }
+      .h { font-family:Helvetica, Arial, sans-serif; font-size:12; font-weight:700; fill:#13315C; }
+      .arr { stroke:#13315C; stroke-width:1.5; fill:none; marker-end:url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#13315C"/></marker>
+  </defs>
+  <text class="h" x="24" y="70">Ingestion</text>
+  <rect class="box" x="24" y="85" width="110" height="44"/><text class="t" x="79" y="111">Documents</text>
+  <rect class="box" x="154" y="85" width="110" height="44"/><text class="t" x="209" y="111">Preprocess</text>
+  <rect class="box" x="284" y="85" width="110" height="44"/><text class="t" x="339" y="111">Chunk</text>
+  <rect class="box" x="414" y="85" width="110" height="44"/><text class="t" x="469" y="111">Embed</text>
+  <rect class="box" x="544" y="85" width="110" height="44"/><text class="t" x="599" y="111">Vector Index</text>
+  <path class="arr" d="M134,107 H154"/><path class="arr" d="M264,107 H284"/><path class="arr" d="M394,107 H414"/><path class="arr" d="M524,107 H544"/>
+  <text class="h" x="24" y="180">Query time</text>
+  <rect class="box" x="24" y="200" width="110" height="44"/><text class="t" x="79" y="226">User Question</text>
+  <rect class="box" x="154" y="200" width="110" height="44"/><text class="t" x="209" y="226">AuthZ Filter</text>
+  <rect class="box" x="284" y="200" width="110" height="44"/><text class="t" x="339" y="226">Retrieve</text>
+  <rect class="box" x="414" y="200" width="120" height="44"/><text class="t" x="474" y="226">Build Context</text>
+  <rect class="box" x="554" y="200" width="120" height="44"/><text class="t" x="614" y="226">Azure OpenAI</text>
+  <rect class="box" x="694" y="200" width="140" height="44"/><text class="t" x="764" y="226">Answer + Citations</text>
+  <path class="arr" d="M134,222 H154"/><path class="arr" d="M264,222 H284"/><path class="arr" d="M394,222 H414"/><path class="arr" d="M534,222 H554"/><path class="arr" d="M674,222 H694"/>
+  <path class="arr" d="M599,129 V180 H339 V200"/>
+  <text class="h" x="24" y="300">Evaluation</text>
+  <rect class="box" x="24" y="320" width="140" height="40"/><text class="t" x="94" y="344">Groundedness</text>
+  <rect class="box" x="184" y="320" width="140" height="40"/><text class="t" x="254" y="344">Relevance</text>
+  <rect class="box" x="344" y="320" width="140" height="40"/><text class="t" x="414" y="344">Completeness</text>
+  <rect class="box" x="504" y="320" width="140" height="40"/><text class="t" x="574" y="344">Latency</text>
+  <path class="arr" d="M764,244 V360 H644"/>
+</svg>

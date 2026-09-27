@@ -1,0 +1,14 @@
+{
+  "_comment": "Reference Implementation — example metadata filter for vector search",
+  "filter": {
+    "op": "and",
+    "conditions": [
+      { "field": "product", "eq": "retail-banking" },
+      { "field": "region", "in": ["CA", "ON"] },
+      { "field": "acl_group", "in": ["{{user_entra_groups}}"] },
+      { "field": "effective_date", "lte": "{{today}}" }
+    ]
+  },
+  "top_k": 8,
+  "min_score": 0.35
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-label="Fabric and Copilot sanitized reference architecture">
+  <rect width="960" height="360" fill="#F7FAFC"/>
+  <text x="24" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B2545">Fabric + Copilot  Sanitized Reference Architecture</text>
+  <defs>
+    <style>
+      .box { fill:#fff; stroke:#1B4F72; stroke-width:1.5; rx:6; }
+      .t { font-family:Helvetica, Arial, sans-serif; font-size:11; fill:#0B2545; text-anchor:middle; }
+      .arr { stroke:#13315C; stroke-width:1.5; fill:none; marker-end:url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#13315C"/></marker>
+  </defs>
+  <rect class="box" x="30" y="100" width="120" height="50"/><text class="t" x="90" y="130">Sources</text>
+  <rect class="box" x="180" y="100" width="130" height="50"/><text class="t" x="245" y="122">Fabric Ingest</text><text class="t" x="245" y="138" style="font-size:10px;fill:#4A5568">Pipelines / Dataflows</text>
+  <rect class="box" x="340" y="70" width="100" height="40"/><text class="t" x="390" y="94">Bronze</text>
+  <rect class="box" x="460" y="70" width="100" height="40"/><text class="t" x="510" y="94">Silver</text>
+  <rect class="box" x="580" y="70" width="100" height="40"/><text class="t" x="630" y="94">Gold</text>
+  <rect class="box" x="460" y="140" width="160" height="44"/><text class="t" x="540" y="166">Semantic Model</text>
+  <rect class="box" x="700" y="90" width="110" height="40"/><text class="t" x="755" y="114">Power BI</text>
+  <rect class="box" x="700" y="150" width="140" height="40"/><text class="t" x="770" y="174">Copilot / AI</text>
+  <rect class="box" x="340" y="240" width="200" height="44"/><text class="t" x="440" y="266">Purview · RBAC · RLS</text>
+  <path class="arr" d="M150,125 H180"/><path class="arr" d="M310,125 H390 V110"/><path class="arr" d="M440,90 H460"/><path class="arr" d="M560,90 H580"/><path class="arr" d="M630,110 V140 H540"/><path class="arr" d="M620,162 H700"/><path class="arr" d="M620,162 H700"/><path class="arr" d="M540,184 V240"/>
+  <text class="t" x="480" y="330" style="fill:#4A5568">AI consumes curated Gold / semantic outputs, not raw Bronze tables.</text>
+</svg>

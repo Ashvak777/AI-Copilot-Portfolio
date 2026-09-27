@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Security and governance sanitized reference architecture">
+  <rect width="960" height="420" fill="#F7FAFC"/>
+  <text x="24" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B2545">Security &amp; Governance  Sanitized Reference Architecture</text>
+  <defs>
+    <style>
+      .box { fill:#fff; stroke:#1B4F72; stroke-width:1.5; rx:6; }
+      .t { font-family:Helvetica, Arial, sans-serif; font-size:11; fill:#0B2545; text-anchor:middle; }
+      .arr { stroke:#13315C; stroke-width:1.5; fill:none; marker-end:url(#m); }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#13315C"/></marker>
+  </defs>
+  <rect class="box" x="40" y="80" width="140" height="44"/><text class="t" x="110" y="106">Authenticated User</text>
+  <rect class="box" x="220" y="80" width="140" height="44"/><text class="t" x="290" y="106">Entra ID / CA</text>
+  <rect class="box" x="400" y="80" width="160" height="44"/><text class="t" x="480" y="106">Copilot / AI App</text>
+  <rect class="box" x="600" y="80" width="200" height="44"/><text class="t" x="700" y="106">Policy · RBAC · DLP</text>
+  <path class="arr" d="M180,102 H220"/><path class="arr" d="M360,102 H400"/><path class="arr" d="M560,102 H600"/>
+  <rect class="box" x="200" y="180" width="180" height="50"/><text class="t" x="290" y="202">Read Tools</text><text class="t" x="290" y="218" style="font-size:10px;fill:#4A5568">Least-privilege OAuth / MI</text>
+  <rect class="box" x="480" y="180" width="200" height="50"/><text class="t" x="580" y="202">Write Tools</text><text class="t" x="580" y="218" style="font-size:10px;fill:#4A5568">Separate identity + approval</text>
+  <path class="arr" d="M650,124 V180"/><path class="arr" d="M650,124 H290 V180"/>
+  <rect class="box" x="300" y="280" width="280" height="44"/><text class="t" x="440" y="306">Enterprise Systems + Purview</text>
+  <path class="arr" d="M290,230 V280 H400"/><path class="arr" d="M580,230 V302 H580"/>
+  <rect class="box" x="120" y="350" width="80" height="36"/><text class="t" x="160" y="372">Dev</text>
+  <rect class="box" x="220" y="350" width="80" height="36"/><text class="t" x="260" y="372">Test</text>
+  <rect class="box" x="320" y="350" width="80" height="36"/><text class="t" x="360" y="372">UAT</text>
+  <rect class="box" x="420" y="350" width="80" height="36"/><text class="t" x="460" y="372">Prod</text>
+  <rect class="box" x="560" y="350" width="200" height="36"/><text class="t" x="660" y="372">Audit Logging</text>
+  <text class="t" x="480" y="410" style="fill:#4A5568">Never exceed the authenticated user&apos;s normal entitlements.</text>
+</svg>
